@@ -77,8 +77,8 @@
 	text-align: center;
 }
 
-.signup-container-login-Button,
-.signup-container-Button {
+.signup-container-login-button,
+.signup-container-button {
 	border: none;
 	outline: none;
 	padding: 12px 0;
@@ -90,7 +90,7 @@
 	cursor: pointer;
 }
 
-.signup-container-Button {
+.signup-container-button {
 	background-color: #3bb19b;
 	color: white;
 	margin: 10px;

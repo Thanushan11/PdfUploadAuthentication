@@ -10,8 +10,8 @@ export const Login = () => {
     const[error,setError]=useState()
 
     const[data,setData] =useState({
-        Email:"",
-        Password:""
+        email:"",
+        password:""
     })
    
 
@@ -25,7 +25,7 @@ export const Login = () => {
     const handleSubmit =async (e)=>{
             e.preventDefault();
             try {
-                const url ="http://localhost:8080/api/auth"
+                const url ="http://localhost:3000/api/auth/login"
                 const {data:res} =await axios.post(url,data)
                 localStorage.setItem("token",res.data)
                 window.location="/"
@@ -44,8 +44,8 @@ export const Login = () => {
             <div className="login-container-left">
             <form action="" className="login-container-form" onSubmit={handleSubmit}>
                 <h1>Log into  Your Account</h1>
-                <input type="text"  placeholder="Email" name="Email" value={data.Email} required onChange={handleChange}/>
-                <input type="Password"  placeholder="Password" name="Password" value={data.Password} required onChange={handleChange}/>
+                <input type="text"  placeholder="Email" name="email" value={data.Email} required onChange={handleChange}/>
+                <input type="Password"  placeholder="Password" name="password" value={data.Password} required onChange={handleChange}/>
                 {error&& <div className="login-container-error"> {error}</div>}
                 <button className="login-container-Button" type="submit">Sign in</button>
                </form>

@@ -12,7 +12,7 @@ export const Main = () => {
    <div className="main-container">
     <nav className="navbar">
         <h1>Pdf Viewer</h1>
-        <button onClick={handleLogout} className="main-container-button"></button>
+        <button onClick={handleLogout} className="main-container-button"> Logout</button>
     </nav>
    </div>
   )
