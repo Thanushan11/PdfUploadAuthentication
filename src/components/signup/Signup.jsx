@@ -24,7 +24,7 @@ export const Signup = () => {
         e.preventDefault();
         console.log('Submitting data:', data);
         try {
-            const url = "http://localhost:3000/api/users/signup";
+            const url = "http://localhost:8080/api/users/signup";
             const { data: res } = await axios.post(url, data);
             navigate('/login');
             console.log(res.message);

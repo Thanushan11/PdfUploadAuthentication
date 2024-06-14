@@ -1,3 +1,4 @@
+import { Pdf } from "../Pdf/Pdf";
 import "./Main.css"
 
 
@@ -13,7 +14,9 @@ export const Main = () => {
     <nav className="navbar">
         <h1>Pdf Viewer</h1>
         <button onClick={handleLogout} className="main-container-button"> Logout</button>
+        
     </nav>
+    <Pdf/>
    </div>
   )
 }
