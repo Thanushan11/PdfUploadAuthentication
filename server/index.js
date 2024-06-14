@@ -5,6 +5,7 @@ const express = require('express');
  const connetion =require("./database/db.js")
  const userRoutes = require('./routes/user.js');
  const authRoutes = require('./routes/auth.js');
+ const pdfRoutes =require('./routes/pdf.js')
  
 
 
@@ -18,8 +19,9 @@ connetion();
 // Routes
 app.use('/api/users', userRoutes);
 app.use('/api/auth', authRoutes);
+app.use('/api/pdf', pdfRoutes);
 
- const port = process.env.port ||3000 
+ const port = process.env.port ||8080
  app.listen(port,()=>{
     console.log(`Lisiting on port ${port}...`);
  })
